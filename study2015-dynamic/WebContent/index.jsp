@@ -1,6 +1,5 @@
-<%@page import="common.dto.최대열"%>
-<%@ page language="java" pageEncoding="UTF-8"
-    contentType="text/html;charset=utf-8"%>
+<%@ page import="common.dto.최대열"%>
+<%@ page language="java" pageEncoding="UTF-8" contentType="text/html;charset=utf-8"%>
 
 <%
     response.setHeader("Cache-Control", "no-store");
