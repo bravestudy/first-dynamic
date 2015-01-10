@@ -1,4 +1,4 @@
-<%@ page import="common.dto.최대열"%>
+<%@ page import="common.dto.*"%>
 <%@ page language="java" pageEncoding="UTF-8" contentType="text/html;charset=utf-8"%>
 
 <%
@@ -35,6 +35,7 @@
 <body>
 <%
 최대열 cdy = new 최대열();
+MinwookShim minwook =  new MinwookShim();
 %>
 
     <!-- Navigation -->
@@ -96,7 +97,7 @@
             </div>
             <div class="col-lg-4 col-sm-6 text-center">
                 <img class="img-circle img-responsive img-center" src="http://placehold.it/200x200" alt="">
-                <h3>John Smith
+                <h3><%=minwook.name %>
                     <small>Job Title</small>
                 </h3>
                 <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
