@@ -1,4 +1,6 @@
-<%@ page import="common.dto.*"%>
+<%@page import="study.java.pojo.MinwookShim"%>
+<%@page import="study.java.pojo.최대열"%>
+<%@ page import="common.utils.*"%>
 <%@ page language="java" pageEncoding="UTF-8" contentType="text/html;charset=utf-8"%>
 
 <%
