@@ -1,10 +1,42 @@
-<%@page import="study.java.pojo.MinwookShim"%>
-<%@page import="study.java.pojo.최대열"%>
+<%@page import="study.java.pojo.member.InterfaceIntro"%>
+<%@page import="study.java.pojo.member.YongLockLee"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.List"%>
+<%@page import="mobile.dto.MobileContents"%>
+<%@page import="study.java.pojo.member.MinwookShim"%>
+<%@page import="study.java.pojo.member.DeaYulChoi"%>
 <%@ page import="common.utils.*"%>
 <%@ page language="java" pageEncoding="UTF-8" contentType="text/html;charset=utf-8"%>
 
 <%
-    response.setHeader("Cache-Control", "no-store");
+	response.setHeader("Cache-Control", "no-store");
+%>
+<%
+DeaYulChoi cdy = new DeaYulChoi();
+MinwookShim minwookShim = new MinwookShim();
+YongLockLee yongLockLee = new YongLockLee();
+
+
+//인터페이스는 이런 느낌임
+List<InterfaceIntro> arlMemberInfo = new ArrayList<InterfaceIntro>();
+arlMemberInfo.add(cdy);
+arlMemberInfo.add(minwookShim);
+arlMemberInfo.add(yongLockLee);
+
+out.println("<br/>=====================목표====================<br/>");
+for (InterfaceIntro memberInfo : arlMemberInfo) {
+    out.println(memberInfo.getGoal());
+}
+
+out.println("<br/>=====================이름 정보====================<br/>");
+for (InterfaceIntro memberInfo : arlMemberInfo) {
+    out.println(memberInfo.getName());
+}
+
+out.println("<br/>=====================멤버 정보====================<br/>");
+for (InterfaceIntro memberInfo : arlMemberInfo) {
+    out.println(memberInfo.getMemberInfo());
+}
 %>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,10 +67,6 @@
 </head>
 
 <body>
-<%
-최대열 cdy = new 최대열();
-MinwookShim minwook =  new MinwookShim();
-%>
 
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -92,14 +120,14 @@ MinwookShim minwook =  new MinwookShim();
             </div>
             <div class="col-lg-4 col-sm-6 text-center">
                 <img class="img-circle img-responsive img-center" src="http://placehold.it/200x200" alt="">
-                <h3><%=cdy.이름%>
+                <h3><%=cdy.name%>
                     <small>Job Title</small>
                 </h3>
                 <p><%=cdy%></p>
             </div>
             <div class="col-lg-4 col-sm-6 text-center">
                 <img class="img-circle img-responsive img-center" src="http://placehold.it/200x200" alt="">
-                <h3><%=minwook.name %>
+                <h3>
                     <small>Job Title</small>
                 </h3>
                 <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
