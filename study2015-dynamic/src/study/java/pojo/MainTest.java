@@ -23,13 +23,21 @@ public class MainTest {
 		DeaYulChoi cdy = new DeaYulChoi();
 		MinwookShim minwookShim = new MinwookShim();
 		YongLockLee yongLockLee = new YongLockLee();
-		
+		KDH kdh= new KDH();
 		
 		//인터페이스는 이런 느낌임
 		List<InterfaceIntro> arlMemberInfo = new ArrayList<InterfaceIntro>();
 		arlMemberInfo.add(cdy);
 		arlMemberInfo.add(minwookShim);
 		arlMemberInfo.add(yongLockLee);
+		
+		cdy.getGoal();
+		minwookShim.getGoal();
+		yongLockLee.getGoal();
+		kdh.getGoal();
+		
+		
+		
 		
 		System.out.println("=====================목표====================");
 		for (InterfaceIntro memberInfo : arlMemberInfo) {
